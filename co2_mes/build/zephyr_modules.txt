@@ -1,0 +1,3 @@
+"sensirion_drivers":"/home/aj/TpRTOS/modules/sensirion_zephyr_drivers":"/home/aj/TpRTOS/modules/sensirion_zephyr_drivers"
+"cmsis":"/home/aj/TpRTOS/modules/hal/cmsis":"${ZEPHYR_CMSIS_CMAKE_DIR}"
+"hal_stm32":"/home/aj/TpRTOS/modules/hal/stm32":"/home/aj/TpRTOS/modules/hal/stm32"

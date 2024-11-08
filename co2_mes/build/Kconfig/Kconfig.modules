@@ -1,0 +1,18 @@
+menu "sensirion_drivers (/home/aj/TpRTOS/modules/sensirion_zephyr_drivers)"
+osource "/home/aj/TpRTOS/modules/sensirion_zephyr_drivers/Kconfig"
+config ZEPHYR_SENSIRION_DRIVERS_MODULE
+	bool
+	default y
+endmenu
+menu "cmsis (/home/aj/TpRTOS/modules/hal/cmsis)"
+osource "$(ZEPHYR_CMSIS_KCONFIG)"
+config ZEPHYR_CMSIS_MODULE
+	bool
+	default y
+endmenu
+config ZEPHYR_HAL_STM32_MODULE
+	bool
+	default y
+
+config ZEPHYR_HAL_STM32_MODULE_BLOBS
+	bool

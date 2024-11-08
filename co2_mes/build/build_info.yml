@@ -1,0 +1,47 @@
+cmake:
+  application:
+    configuration-dir: /home/aj/TpRTOS/co2-measurement-device/app
+    source-dir: /home/aj/TpRTOS/co2-measurement-device/app
+  board:
+    name: nucleo_wl55jc
+    qualifiers: stm32wl55xx
+    revision: 
+  devicetree:
+    bindings-dirs:
+     - /home/aj/TpRTOS/modules/sensirion_zephyr_drivers/dts/bindings
+     - /home/aj/TpRTOS/zephyr/dts/bindings
+    files:
+     - /home/aj/TpRTOS/zephyr/boards/st/nucleo_wl55jc/nucleo_wl55jc.dts
+    include-dirs:
+     - /home/aj/TpRTOS/modules/sensirion_zephyr_drivers/dts
+     - /home/aj/TpRTOS/modules/hal/stm32/dts
+     - /home/aj/TpRTOS/zephyr/include
+     - /home/aj/TpRTOS/zephyr/include/zephyr
+     - /home/aj/TpRTOS/zephyr/dts/common
+     - /home/aj/TpRTOS/zephyr/dts/x86
+     - /home/aj/TpRTOS/zephyr/dts/xtensa
+     - /home/aj/TpRTOS/zephyr/dts/sparc
+     - /home/aj/TpRTOS/zephyr/dts/riscv
+     - /home/aj/TpRTOS/zephyr/dts/posix
+     - /home/aj/TpRTOS/zephyr/dts/nios2
+     - /home/aj/TpRTOS/zephyr/dts/arm64
+     - /home/aj/TpRTOS/zephyr/dts/arm
+     - /home/aj/TpRTOS/zephyr/dts/arc
+     - /home/aj/TpRTOS/zephyr/dts
+  kconfig:
+    files:
+     - /home/aj/TpRTOS/zephyr/boards/st/nucleo_wl55jc/nucleo_wl55jc_defconfig
+     - /home/aj/TpRTOS/co2-measurement-device/app/prj.conf
+    user-files:
+     - /home/aj/TpRTOS/co2-measurement-device/app/prj.conf
+  toolchain:
+    name: zephyr
+    path: /home/aj/zephyr-sdk-0.17.0
+  zephyr:
+    version: 4.0.0-rc2
+    zephyr-base: /home/aj/TpRTOS/zephyr
+version: 0.1.0
+west:
+  command: /home/aj/TpRTOS/.venv/bin/west build app -b nucleo_wl55jc --pristine
+  topdir: /home/aj/TpRTOS
+  version: 1.3.0

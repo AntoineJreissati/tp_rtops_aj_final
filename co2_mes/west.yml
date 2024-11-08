@@ -1,0 +1,30 @@
+manifest:
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: sensirion
+      url-base: https://github.com/nobodyguy
+    - name: loramac-node
+      url-base: https://github.com/zephyrproject-rtos
+    - name: semtech
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: main
+      import:
+        name-allowlist:
+          - cmsis
+          - hal_stm32
+
+    - name: sensirion_zephyr_drivers
+      remote: sensirion
+      revision: main
+      path: modules/sensirion_zephyr_drivers
+
+    #- name: loramac-node
+    #  remote: semtech
+    #  path: modules/lib/loramac-node
+    #  revision: master
+      
